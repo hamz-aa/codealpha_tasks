@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title icon -->
+    <link rel="icon" type="image/png" href="./img/hamza_logo.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/utility.css" />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/953afe11c5.js"
+      crossorigin="anonymous"
+    ></script>
+
+      <!-- gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- typed.js cdn -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="./app.js" defer></script>
+
+    <title>Hamza Ahmed</title>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <header>
+      <div class="container header-wrapper">
+        <div class="logo-wrapper">
+          <img src="./img/hamza_logo.png" alt="logo" />
+          <p data-value="Hamza Ahmed" class="name gsap-ani-link">Hamza Ahmed</p>
+        </div>
+        <input type="checkbox" name="" id=""/>
+        <nav>
+          <ul>
+            <li class="gsap-ani-link"><a href="#home">Home</a></li>
+            <li class="gsap-ani-link"><a href="#about">About</a></li>
+            <li class="gsap-ani-link"><a href="#skills">Skills</a></li>
+            <li class="gsap-ani-link"><a href="#projects">Projects</a></li>
+            <li class="gsap-ani-link"><a href="#contact">Contact</a></li>
+            <li id="cv" class="gsap-ani-link"><a href="./utils/CV.pdf" download="Hamza Ahmed CV">Download CV</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger-menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- home section -->
+    <section id="home">
+      <div class="home-wrapper container">
+        <div class="home-content gsap-ani-block">
+          <h1>Hamza Ahmed</h1>
+          <div class="typewriter-wrapper">
+            <h3 class="typewriter-text text-1"></h3>
+          </div>
+          <div class="home-btns">
+            <a href="#contact" class="contact-btn">Contact Info</a>
+            <a href="./utils/CV.pdf" class="cv-btn" download="Hamza Ahmed CV">Download CV</a>
+          </div>
+          <div class="home-links">
+            <a href="https://www.linkedin.com/in/hamza-ahmed-cs/" target="_blank" class="linkedin"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/hamz-aa" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="img-content border-animation gsap-ani-block">
+          <div class="img"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section -->
+    <section id="about">
+      <div class="about-headings">
+        <p>Get To Know More</p>
+        <h3>About Me</h3>
+      </div>
+      <div class="about-wrapper container">
+        <div class="img-content">
+          <div class="border">
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="about-boxes">
+            <div class="experience">
+              <i class="fa-solid fa-award"></i>
+              <h4>Experience</h4>
+              <p>
+                6+ Months <br />
+                MERN Stack <br />
+                Development
+              </p>
+            </div>
+            <div class="education">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h4>Education</h4>
+              <p>
+                Undergraduate <br />
+                Computer Science <br />
+                Student
+              </p>
+            </div>
+          </div>
+          <div class="about-text">
+            <p>
+              As an undergrad computer science student with a passion for exploring new technologies, I am embarking on an exciting journey into the world of the MERN stack. I see the MERN stack as a powerful toolkit for building modern, dynamic web applications, and I am thrilled to learn how to leverage its capabilities. Through hands-on experimentation and dedicated learning, I am determined to become proficient in MERN stack development, contributing to cutting-edge projects and pushing the boundaries of what's possible in the realm of web development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills">
+      <div class="skills-headings">
+        <p>Explore My</p>
+        <h3>Skills</h3>
+      </div>
+      <div class="skills-wrapper container">
+        <div class="mern-skills">
+          <h3>Web Development</h3>
+          <div class="skills-list">
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>HTML</p>
+                <p>Experienced</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>CSS</p>
+                <p>Experienced</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>SASS</p>
+                <p>Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>JavaScript</p>
+                <p>Experienced</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>React JS</p>
+                <p>Basic</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>Git</p>
+                <p>Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-skills">
+          <h3>Computer Science</h3>
+          <div class="skills-list">
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>OOP</p>
+                <p>Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>Data Structures</p>
+                <p>Intermediate</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>Database</p>
+                <p>Basic</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>Algorithms</p>
+                <p>Basic</p>
+              </div>
+            </div>
+            <div class="skill-wrapper">
+              <i class="fa-solid fa-circle-check"></i>
+              <div class="skill">
+                <p>Maths</p>
+                <p>Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects section -->
+    <section id="projects">
+      <div class="projects-headings">
+        <p>Browse My Recent</p>
+        <h3>Projects</h3>
+      </div>
+      <div class="projects-wrapper container">
+        <button class="slider-arrow arrow-left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="left-slider">
+          <img class="right-img" src="./img/recipe-app.png" alt="Recipe App" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/recipe-app" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/recipe-app/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="active-slider">
+          <img class="right-img" src="./img/car-rental-site.PNG" alt="Car Rental Site" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/SMIT-car-ui" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/SMIT-car-ui/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="right-slider">
+          <img class="right-img" src="./img/social-media-site.png" alt="Social Media Site" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/social-media-site" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/social-media-site/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div >
+          <img class="right-img" src="./img/pokemon-clone.png" alt="Pokemon Clone" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/pokemon-clone" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/pokemon-clone/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div style="display: none">
+          <img class="right-img" src="./img/animated-site.png" alt="Animated Site" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/animated-website" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/animated-website/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div style="display: none">
+          <img class="right-img" src="./img/food-site.PNG" alt="Food Ordering Site" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/Food-Ordering-Site" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/Food-Ordering-Site/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div style="display: none">
+          <img class="right-img" src="./img/apple-clone.png" alt="Apple Clone" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/apple-clone" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/apple-clone/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div style="display: none">
+          <img class="right-img" src="./img/e-commerce-site.png" alt="E-Commerce Site" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/e-commerce-site" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/e-commerce-site/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div style="display: none">
+          <img class="right-img" src="./img/dice-game.png" alt="Dice Game" />
+          <div class="img-content">
+            <a href="https://github.com/hamz-aa/dice-game" target="_blank">Github</a>
+            <a href="https://hamz-aa.github.io/dice-game/" target="_blank">Demo</a>
+          </div>
+        </div>
+        <button class="slider-arrow arrow-right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-headings">
+        <p>Get In Touch</p>
+        <h3>Contact Me</h3>
+      </div>
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:jhamzaahmed@gmail.com">jhamzaahmed@gmail.com</a>
+          </div>
+          <div class="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/hamza-ahmed-cs/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-wrapper container">
+        <p>Copyright &copy; 2024 Hamza Ahmed. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

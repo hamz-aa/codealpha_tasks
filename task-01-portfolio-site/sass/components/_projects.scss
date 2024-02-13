@@ -1,0 +1,185 @@
+#projects {
+  padding-top: 6em;
+
+  .projects-headings {
+    text-align: center;
+    margin-bottom: 1.5em;
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      cursor: default;
+    }
+
+    @include sm {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .projects-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .left-slider,
+    .right-slider {
+      flex: 1 1 25%;
+      z-index: 1;
+    }
+
+    .active-slider {
+      flex: 1 1 50%;
+      z-index: 2;
+
+      .img-content {
+        a {
+          padding: 0.6em 1.2em;
+        }
+      }
+    }
+
+    @include breakpoint(860px) {
+      .left-slider {
+        margin-left: 25px;
+      }
+
+      .right-slider {
+        margin-right: 25px;
+      }
+    }
+
+    @include md {
+      .left-slider,
+      .right-slider {
+        flex: 0;
+        margin: unset;
+        visibility: hidden;
+      }
+
+      .active-slider {
+        max-width: 85%;
+        margin: auto;
+        visibility: visible;
+      }
+    }
+
+    & > div {
+      position: relative;
+      border: 2px solid $primary;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out,
+        translate 0.3s ease, scale 0.3s ease;
+
+      img {
+        display: block;
+      }
+
+      .img-content {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        opacity: 0;
+
+        a {
+          margin-inline: 0.2em;
+          padding: 0.3em 0.6em;
+          border-radius: 20px;
+          display: inline-block;
+          background-color: $error;
+          color: whitesmoke;
+          transition: background-color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+    }
+
+    & > div::after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out;
+      background-color: rgba(0, 0, 0, 0.623);
+      opacity: 0;
+    }
+
+    & > div:hover::after {
+      opacity: 1;
+    }
+
+    & > div:hover .img-content {
+      opacity: 1;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      z-index: 3;
+
+      i {
+        font-size: 1.6rem;
+        color: $primary;
+
+        &:hover {
+          transition: scale 0.3s ease-in-out;
+          scale: 1.5;
+        }
+      }
+    }
+
+    .arrow-left {
+      left: 1%;
+    }
+
+    .arrow-right {
+      right: 1%;
+    }
+
+    @include md {
+      .arrow-left {
+        left: 3%;
+      }
+
+      .arrow-right {
+        right: 3%;
+      }
+    }
+
+    &:has(div:hover) > div {
+      scale: 1.1;
+    }
+
+    &:has(div:hover) > div:not(:hover) {
+      scale: 0.9;
+      opacity: 0.8;
+    }
+
+    &:has(div:hover) > button i {
+      color: white;
+    }
+
+    &:has(> button:hover) > div:not(:hover) {
+      scale: 0.95;
+    }
+  }
+}
