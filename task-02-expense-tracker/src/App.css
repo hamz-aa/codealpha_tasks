@@ -61,7 +61,7 @@ h1 {
   font-weight: 500;
 }
 
-.add-expense h3 {
+h3 {
   text-align: center;
   font-size: 1.6rem;
   margin-block: 20px;
@@ -150,4 +150,67 @@ h1 {
   padding: 0.5em;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+.transactions {
+  padding: 0.5em 1em;
+}
+
+.top-headings {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.transactions-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.transactions-wrapper > div > div {
+  margin-inline: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.transactions-wrapper > div button {
+  transition: all 0.3s;
+  transform-origin: right;
+  transform: scaleX(0);
+  position: absolute;
+  right: 0;
+  border: none;
+  outline: none;
+  padding: 0 0.5em;
+  height: 100%;
+  background-color: #3a3dbe;
+  color: white;
+  cursor: pointer;
+}
+
+.transactions-wrapper > div > div:hover button {
+  transform: scaleX(1);
+}
+
+.transactions-wrapper > div p:first-child {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.transactions-wrapper > div p:last-child {
+  font-size: 0.8rem;
+}
+
+.transactions-wrapper .description {
+  margin-inline: 15px;
+  text-align: justify;
+}
+
+.transactions-wrapper .amount {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
