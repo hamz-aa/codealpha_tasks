@@ -98,12 +98,13 @@ h3 {
   transition: all 0.2s;
 }
 
-.buttons:hover::after {
+.buttons.active::after {
   left: 55%;
 }
 
 .form {
   padding: 1em;
+  position: relative;
 }
 
 .form > div {
@@ -213,4 +214,11 @@ h3 {
 .transactions-wrapper .amount {
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.form.active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(212, 212, 212, 0.45);
 }

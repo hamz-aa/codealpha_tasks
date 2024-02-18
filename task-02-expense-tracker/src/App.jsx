@@ -1,15 +1,29 @@
+import { useState } from "react";
 import "./App.css";
 import AddExpense from "./components/AddExpense";
 import Balance from "./components/Balance";
 import TransactionsList from "./components/TransactionsList";
 
 function App() {
+  const [balance, setBalance] = useState({
+    total: 0,
+    income: 0,
+    expense: 0,
+  });
+
+  const [transaction, setTransaction] = useState([]);
+
   return (
     <>
       <h1>Expense Tracker</h1>
       <div className="app-wrapper">
-        <Balance />
-        <AddExpense />
+        <Balance balance={balance} />
+        <AddExpense
+          transaction={transaction}
+          setTransaction={setTransaction}
+          balance={balance}
+          setBalance={setBalance}
+        />
         <TransactionsList />
       </div>
     </>
