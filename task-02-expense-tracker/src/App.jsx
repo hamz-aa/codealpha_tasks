@@ -1,7 +1,7 @@
 import "./App.css";
 import AddExpense from "./components/AddExpense";
 import Balance from "./components/Balance";
-import Transactions from "./components/Transactions";
+import TransactionsList from "./components/TransactionsList";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div className="app-wrapper">
         <Balance />
         <AddExpense />
-        <Transactions />
+        <TransactionsList />
       </div>
     </>
   );
