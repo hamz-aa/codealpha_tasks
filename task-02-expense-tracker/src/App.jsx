@@ -13,6 +13,16 @@ function App() {
 
   const [transaction, setTransaction] = useState([]);
 
+  function handleBalance(item) {
+    const newBalance = { ...balance };
+    // if (item.id === "expense") newBalance.expense -= Number(item.amount);
+    // else if(item.id === 'income') newBalance.income -= Number(item.amount);
+    newBalance[item.id] -= Number(item.amount);
+    if (item.id === "expense") newBalance.total += Number(item.amount);
+    else if (item.id === "income") newBalance.total -= Number(item.amount);
+    setBalance(newBalance);
+  }
+
   return (
     <>
       <h1>Expense Tracker</h1>
@@ -27,6 +37,7 @@ function App() {
         <TransactionsList
           transaction={transaction}
           setTransaction={setTransaction}
+          setHandleBalance={handleBalance}
         />
       </div>
     </>

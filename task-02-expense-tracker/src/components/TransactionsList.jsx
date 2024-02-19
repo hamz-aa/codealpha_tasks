@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
 import Transaction from "./Transaction";
 
-const TransactionsList = ({ transaction, setTransaction }) => {
+const TransactionsList = ({
+  transaction,
+  setTransaction,
+  setHandleBalance,
+}) => {
   function handleTransactions(key) {
     const newTransactions = transaction.filter((tr) => tr.key !== key);
     setTransaction(newTransactions);
@@ -23,6 +27,7 @@ const TransactionsList = ({ transaction, setTransaction }) => {
                   key={tr.key}
                   tr={tr}
                   setHandleTransactions={handleTransactions}
+                  setHandleBalance={setHandleBalance}
                 />
               )
           )}
@@ -35,6 +40,7 @@ const TransactionsList = ({ transaction, setTransaction }) => {
                   key={tr.key}
                   tr={tr}
                   setHandleTransactions={handleTransactions}
+                  setHandleBalance={setHandleBalance}
                 />
               )
           )}
