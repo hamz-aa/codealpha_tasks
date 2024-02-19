@@ -24,7 +24,10 @@ function App() {
           balance={balance}
           setBalance={setBalance}
         />
-        <TransactionsList />
+        <TransactionsList
+          transaction={transaction}
+          setTransaction={setTransaction}
+        />
       </div>
     </>
   );

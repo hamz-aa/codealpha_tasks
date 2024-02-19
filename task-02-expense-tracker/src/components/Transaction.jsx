@@ -1,13 +1,18 @@
-const Transaction = () => {
+import icon from "../assets/close-icon.svg";
+
+/* eslint-disable react/prop-types */
+const Transaction = ({ tr, setHandleTransactions }) => {
   return (
     <div className="expense-wrapper">
       <div className="name-date">
-        <p>Water</p>
-        <p>1/1/2024</p>
+        <p>{tr.category}</p>
+        <p>{tr.date}</p>
       </div>
-      <p className="description">my water bottle made of plastic</p>
-      <p className="amount">5000</p>
-      <button>Remove</button>
+      <p className="description">{tr.description}</p>
+      <p className="amount">${tr.amount}</p>
+      <button onClick={() => setHandleTransactions(tr.key)}>
+        <img src={icon} alt="" />
+      </button>
     </div>
   );
 };

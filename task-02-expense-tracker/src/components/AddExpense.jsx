@@ -11,6 +11,7 @@ const initialValues = {
 function AddExpense({ transaction, setTransaction, balance, setBalance }) {
   const [flag, setFlag] = useState(false);
   const [values, setValues] = useState(initialValues);
+  const [key, setKey] = useState(0);
 
   const expenseRef = useRef();
   const incomeRef = useRef();
@@ -23,23 +24,29 @@ function AddExpense({ transaction, setTransaction, balance, setBalance }) {
   const transactionHandler = (e) => {
     let cat,
       target = e.target.name;
+    if (values.description === "" || values.amount === "") return;
     if (target === "expense") {
       cat = expenseRef.current.value;
       setBalance({
-        total: balance.total - values.amount,
+        total: balance.total - Number(values.amount),
         income: balance.income,
-        expense: Number(values.amount),
+        expense: balance.expense + Number(values.amount),
       });
     }
     if (target === "income") {
       cat = incomeRef.current.value;
       setBalance({
         total: balance.total + Number(values.amount),
-        income: Number(values.amount),
+        income: balance.income + Number(values.amount),
         expense: balance.expense,
       });
     }
-    setTransaction([...transaction, { ...values, id: target, category: cat }]);
+    setTransaction([
+      ...transaction,
+      { ...values, id: target, category: cat, key: key },
+    ]);
+    setKey(key + 1);
+    setValues(initialValues);
   };
 
   function btnHandler() {
@@ -90,6 +97,7 @@ function AddExpense({ transaction, setTransaction, balance, setBalance }) {
                 name="amount"
                 value={!flag ? values.amount : 0}
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div>
@@ -130,6 +138,7 @@ function AddExpense({ transaction, setTransaction, balance, setBalance }) {
                 name="description"
                 value={flag ? values.description : ""}
                 onChange={handleInputChange}
+                required
               />
             </div>
           </div>
@@ -142,6 +151,7 @@ function AddExpense({ transaction, setTransaction, balance, setBalance }) {
                 name="amount"
                 value={flag ? values.amount : 0}
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div>

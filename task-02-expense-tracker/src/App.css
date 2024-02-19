@@ -24,6 +24,7 @@ h1 {
   padding: 1em;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 30px;
 }
 
 .balance {
@@ -173,9 +174,12 @@ h3 {
   margin-inline: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   position: relative;
-  margin-bottom: 20px;
+  padding: 0.8em 0.5em;
+  cursor: default;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .transactions-wrapper > div button {
@@ -188,13 +192,21 @@ h3 {
   outline: none;
   padding: 0 0.5em;
   height: 100%;
-  background-color: #3a3dbe;
+  background-color: red;
   color: white;
   cursor: pointer;
 }
 
 .transactions-wrapper > div > div:hover button {
   transform: scaleX(1);
+}
+
+.transactions-wrapper > div > div:has(button:hover) {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.transactions-wrapper > div > div:hover {
+  background-color: #d4d4d4;
 }
 
 .transactions-wrapper > div p:first-child {
@@ -208,7 +220,8 @@ h3 {
 
 .transactions-wrapper .description {
   margin-inline: 15px;
-  text-align: justify;
+  width: 100%;
+  text-align: start;
 }
 
 .transactions-wrapper .amount {
@@ -221,4 +234,13 @@ h3 {
   position: absolute;
   inset: 0;
   background-color: rgba(212, 212, 212, 0.45);
+}
+
+.expense-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.expense-wrapper .name-date {
+  width: 50%;
 }
