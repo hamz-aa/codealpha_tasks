@@ -1,8 +1,9 @@
-# React + Vite
+# Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Task#02 of code alpha internship.
 
-Currently, two official plugins are available:
+View Live Site: [https://expense-tracker-codealpha.netlify.app/](https://expense-tracker-codealpha.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sample Screenshots
+
+![Expense Tracker Image](./screenshots/expense-tracker-screenshot.png)

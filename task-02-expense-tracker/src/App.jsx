@@ -15,8 +15,6 @@ function App() {
 
   function handleBalance(item) {
     const newBalance = { ...balance };
-    // if (item.id === "expense") newBalance.expense -= Number(item.amount);
-    // else if(item.id === 'income') newBalance.income -= Number(item.amount);
     newBalance[item.id] -= Number(item.amount);
     if (item.id === "expense") newBalance.total += Number(item.amount);
     else if (item.id === "income") newBalance.total -= Number(item.amount);

@@ -75,6 +75,8 @@ function AddExpense({ transaction, setTransaction, balance, setBalance }) {
                 <option value="Drinks">Drinks</option>
                 <option value="Food">Food</option>
                 <option value="Transport">Transport</option>
+                <option value="Rent">Rent</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div>
