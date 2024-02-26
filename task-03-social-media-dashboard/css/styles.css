@@ -107,7 +107,14 @@ body {
 }
 
 .sidebar-title > span {
+  cursor: pointer;
   display: none;
+}
+
+.sidebar-title span.close-icon {
+  margin-top: 15px;
+  margin-left: 35px;
+  background-color: red;
 }
 
 .sidebar-brand {
@@ -303,6 +310,10 @@ body {
 
   .sidebar-title > span {
     display: inline;
+  }
+
+  .card:hover {
+    scale: unset;
   }
 }
 
