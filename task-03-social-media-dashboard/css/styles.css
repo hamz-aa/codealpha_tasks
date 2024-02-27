@@ -288,6 +288,48 @@ body {
   font-size: 25px;
 }
 
+/* modal css */
+/* cards modal */
+.modal {
+  border: 1px solid white;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+  background-color: #ee4266;
+  width: 30vw;
+  color: #fff;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal > h2 {
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.cards-modal-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards-modal-wrapper > p {
+  margin-inline: 30px;
+  font-size: 1.1rem;
+}
+
+.modal button {
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  font-size: 1.1rem;
+}
+
 /* media queries */
 
 /* Medium <= 992px */

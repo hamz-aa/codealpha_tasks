@@ -15,3 +15,20 @@ function closeSidebar() {
     sidebarOpen = false;
   }
 }
+
+// card modal menu
+const cards = document.querySelectorAll(".card");
+const cardsModal = document.querySelector(".cards-modal");
+const closeButton = document.querySelector(".close-btn");
+
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    cardsModal.style.backgroundColor =
+      window.getComputedStyle(card).backgroundColor;
+    cardsModal.showModal();
+  });
+});
+
+closeButton.addEventListener("click", () => {
+  cardsModal.close();
+});
