@@ -306,9 +306,7 @@ body {
 .modal {
   border: 1px solid white;
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-  background-color: #ee4266;
   width: 30vw;
-  color: #fff;
 }
 
 .modal::backdrop {
@@ -344,15 +342,26 @@ body {
   font-size: 1.1rem;
 }
 
-.modal-input {
-  display: inline-block;
-  width: 35px;
-  border: none;
-  outline: none;
-  padding: 0.2em 0.5em;
+/* products modal */
+.product-modal-wrapper label {
+  display: flex;
+  align-items: center;
 }
 
-/* products modal */
+label p {
+  display: inline-block;
+  width: 20%;
+}
+
+label input {
+  outline: none;
+  padding: 0.3em 0.5em;
+  margin-inline: 50px;
+}
+
+.products-modal button {
+  margin-top: 10px;
+}
 
 /* media queries */
 

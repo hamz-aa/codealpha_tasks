@@ -34,3 +34,19 @@ cards.forEach((card) => {
 closeButton.addEventListener("click", () => {
   cardsModal.close();
 });
+
+// products modal menu
+const products = document.querySelectorAll(".social-media .product div");
+const productsModal = document.querySelector(".products-modal");
+const doneButton = document.querySelector(".done-btn");
+
+products.forEach((product) => {
+  product.addEventListener("click", () => {
+    productsModal.firstElementChild.textContent = product.dataset.name;
+    productsModal.showModal();
+  });
+});
+
+doneButton.addEventListener("click", () => {
+  productsModal.close();
+});

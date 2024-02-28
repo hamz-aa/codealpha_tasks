@@ -158,7 +158,7 @@
 
           <div class="social-media">
             <div class="product">
-              <div>
+              <div data-name="Twitter">
                 <div class="product-icon background-red">
                   <i class="bi bi-twitter"></i>
                 </div>
@@ -167,7 +167,7 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
               </div>
-              <div>
+              <div data-name="Instagram">
                 <div class="product-icon background-green">
                   <i class="bi bi-instagram"></i>
                 </div>
@@ -176,7 +176,7 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
               </div>
-              <div>
+              <div data-name="Facebook">
                 <div class="product-icon background-orange">
                   <i class="bi bi-facebook"></i>
                 </div>
@@ -185,7 +185,7 @@
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
               </div>
-              <div>
+              <div data-name="Linkedin">
                 <div class="product-icon background-blue">
                   <i class="bi bi-linkedin"></i>
                 </div>
@@ -198,7 +198,28 @@
           </div>
 
           <!-- modal for products -->
-          <dialog></dialog>
+          <dialog class="modal products-modal">
+            <h2></h2>
+            <div class="product-modal-wrapper">
+              <label for="likes"
+                ><p>Likes</p>
+                <input type="number" />
+              </label>
+              <label for="subscribers"
+                ><p>Subscribers</p>
+                <input type="number" />
+              </label>
+              <label for="followers"
+                ><p>Followers</p>
+                <input type="number" />
+              </label>
+              <label for="messages"
+                ><p>Messages</p>
+                <input type="number" />
+              </label>
+            </div>
+            <button class="done-btn">Done</button>
+          </dialog>
         </div>
       </main>
     </div>
