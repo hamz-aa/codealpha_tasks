@@ -26,6 +26,8 @@ cards.forEach((card) => {
     cardsModal.style.backgroundColor =
       window.getComputedStyle(card).backgroundColor;
     cardsModal.showModal();
+    cardsModal.firstElementChild.textContent =
+      card.firstElementChild.firstElementChild.textContent;
   });
 });
 

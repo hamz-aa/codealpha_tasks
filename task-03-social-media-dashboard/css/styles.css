@@ -281,11 +281,24 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin-left: 22px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .product-icon > .bi {
   font-size: 25px;
+}
+
+.social-media .product div {
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.social-media .product div:hover {
+  background-color: #d0d0d7;
 }
 
 /* modal css */
@@ -315,8 +328,9 @@ body {
 }
 
 .cards-modal-wrapper > p {
-  margin-inline: 30px;
+  margin-inline: 20px;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .modal button {
@@ -329,6 +343,16 @@ body {
   display: block;
   font-size: 1.1rem;
 }
+
+.modal-input {
+  display: inline-block;
+  width: 35px;
+  border: none;
+  outline: none;
+  padding: 0.2em 0.5em;
+}
+
+/* products modal */
 
 /* media queries */
 
