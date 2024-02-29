@@ -16,25 +16,6 @@ function closeSidebar() {
   }
 }
 
-// card modal menu
-const cards = document.querySelectorAll(".card");
-const cardsModal = document.querySelector(".cards-modal");
-const closeButton = document.querySelector(".close-btn");
-
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    cardsModal.style.backgroundColor =
-      window.getComputedStyle(card).backgroundColor;
-    cardsModal.showModal();
-    cardsModal.firstElementChild.textContent =
-      card.firstElementChild.firstElementChild.textContent;
-  });
-});
-
-closeButton.addEventListener("click", () => {
-  cardsModal.close();
-});
-
 // products modal menu
 const products = document.querySelectorAll(".social-media .product div");
 const productsModal = document.querySelector(".products-modal");
@@ -48,5 +29,32 @@ products.forEach((product) => {
 });
 
 doneButton.addEventListener("click", () => {
+  const likes = document.querySelector(".likes-input").value;
+  const subscribers = document.querySelector(".subscribers-input").value;
+  const followers = document.querySelector(".followers-input").value;
+  const messages = document.querySelector(".messages-input").value;
+
+  updateMenu(likes, subscribers, followers, messages);
+
+  document.querySelector(".likes-input").value = 0;
+  document.querySelector(".subscribers-input").value = 0;
+  document.querySelector(".followers-input").value = 0;
+  document.querySelector(".messages-input").value = 0;
+
   productsModal.close();
 });
+
+function updateMenu(likes, subscribers, followers, messages) {
+  document.querySelector(".total-likes").textContent =
+    parseInt(document.querySelector(".total-likes").innerText) +
+    parseInt(likes);
+  document.querySelector(".total-subscribers").textContent =
+    parseInt(document.querySelector(".total-subscribers").innerText) +
+    parseInt(subscribers);
+  document.querySelector(".total-followers").textContent =
+    parseInt(document.querySelector(".total-followers").innerText) +
+    parseInt(followers);
+  document.querySelector(".total-messages").textContent =
+    parseInt(document.querySelector(".total-messages").innerText) +
+    parseInt(messages);
+}

@@ -106,42 +106,30 @@
               <h2>LIKES</h2>
               <span class="material-icons-outlined"> thumb_up </span>
             </div>
-            <h1>4,021</h1>
+            <h1 class="total-likes">4021</h1>
           </div>
           <div class="card">
             <div class="card-inner">
               <h2>SUBSCRIBERS</h2>
               <span class="material-icons-outlined"> subscriptions </span>
             </div>
-            <h1>8,731</h1>
+            <h1 class="total-subscribers">8731</h1>
           </div>
           <div class="card">
             <div class="card-inner">
               <h2>FOLLOWERS</h2>
               <span class="material-icons-outlined"> groups </span>
             </div>
-            <h1>3,841</h1>
+            <h1 class="total-followers">3841</h1>
           </div>
           <div class="card">
             <div class="card-inner">
               <h2>MESSAGES</h2>
               <span class="material-icons-outlined"> forum </span>
             </div>
-            <h1>1,962</h1>
+            <h1 class="total-messages">1962</h1>
           </div>
         </div>
-
-        <!-- modal for cards -->
-        <dialog class="modal cards-modal">
-          <h2></h2>
-          <div class="cards-modal-wrapper">
-            <p>Twitter : <span>0</span></p>
-            <p>Facebook : <span>0</span></p>
-            <p>Instagram : <span>0</span></p>
-            <p>Linkedin : <span>0</span></p>
-          </div>
-          <button class="close-btn">Close</button>
-        </dialog>
 
         <!-- products -->
         <div class="products">
@@ -203,19 +191,19 @@
             <div class="product-modal-wrapper">
               <label for="likes"
                 ><p>Likes</p>
-                <input type="number" />
+                <input type="number" class="likes-input" value="0" />
               </label>
               <label for="subscribers"
                 ><p>Subscribers</p>
-                <input type="number" />
+                <input type="number" class="subscribers-input" value="0" />
               </label>
               <label for="followers"
                 ><p>Followers</p>
-                <input type="number" />
+                <input type="number" class="followers-input" value="0" />
               </label>
               <label for="messages"
                 ><p>Messages</p>
-                <input type="number" />
+                <input type="number" class="messages-input" value="0" />
               </label>
             </div>
             <button class="done-btn">Done</button>
